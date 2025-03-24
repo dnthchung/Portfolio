@@ -1,53 +1,64 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import ProjectCarousel from "@/components/ProjectCarousel";
+
+// Project data
+const projectData = [
+  {
+    id: "holawear",
+    title: "HolaWear Shop",
+    semester: "Semester: 7/9",
+    date: "05/2024 - 07/2024",
+    repoLink: "https://github.com/dnthchung/HolaWear",
+    description: "that allows users to buy clothes with high professionalism.",
+    techStacks: ["ReactJS, Tailwind CSS, Shadcn UI", "NodeJS, ExpressJS, Mongoose, JWT, Bcrypt", "MongoDB Atlas, Cloudinary"],
+    role: "Team lead, Full Stack Developer.",
+    teamSize: 5,
+  },
+  {
+    id: "insurance",
+    title: "Insurance Manage System",
+    semester: "Semester: 5/9",
+    date: "09/2023 - 12/2023",
+    repoLink: "https://github.com/DoanThanhChung-HE176077/Group5-InsuranceManageSystem",
+    description: "allows users to register and manage insurance contracts.",
+    techStacks: ["Java JDBC, Java Servlet, SQL Server", "MVC model, Tomcat 10", "Bootstrap (v5.0), JSP, JQuery"],
+    role: "Team lead, Full Stack Developer.",
+    teamSize: 5,
+  },
+];
+
+// Work Experience data
+const workExperienceData = [
+  {
+    id: "techvision",
+    title: "Junior Back-End Developer",
+    company: "TechVision Software Solutions",
+    date: "06/2023 - 12/2023",
+    responsibilities: [
+      "Developed RESTful APIs using Node.js, Express, and MongoDB",
+      "Implemented authentication and authorization using JWT",
+      "Collaborated with front-end developers to integrate APIs",
+      "Participated in code reviews and improved code quality",
+    ],
+  },
+  {
+    id: "innotech",
+    title: "Software Developer Intern",
+    company: "InnoTech Solutions",
+    date: "01/2023 - 05/2023",
+    responsibilities: [
+      "Assisted in developing and maintaining web applications",
+      "Worked with Java Spring Boot for back-end services",
+      "Learned version control with Git and GitHub",
+      "Participated in daily stand-up meetings and sprint planning",
+    ],
+  },
+];
 
 export default function Home() {
-  const [expandedProjects, setExpandedProjects] = useState<{
-    [key: string]: boolean;
-  }>({
-    holawear: false,
-    insurance: false,
-  });
-
-  // Refs for measuring content height
-  const projectRefs = {
-    holawear: useRef<HTMLDivElement>(null),
-    insurance: useRef<HTMLDivElement>(null),
-  };
-
-  // State to store heights
-  const [heights, setHeights] = useState<{
-    [key: string]: number;
-  }>({
-    holawear: 0,
-    insurance: 0,
-  });
-
-  // Measure content heights on initial render
-  useEffect(() => {
-    const newHeights = { ...heights };
-
-    Object.keys(projectRefs).forEach((key) => {
-      const ref = projectRefs[key as keyof typeof projectRefs];
-      if (ref.current) {
-        // Store the scrollHeight (full height of content)
-        newHeights[key] = ref.current.scrollHeight;
-      }
-    });
-
-    setHeights(newHeights);
-  }, []);
-
-  const toggleProject = (project: string) => {
-    setExpandedProjects((prev) => ({
-      ...prev,
-      [project]: !prev[project],
-    }));
-  };
-
   return (
     <main className="min-h-screen flex items-center justify-center p-10 relative">
       {/* Video Background */}
@@ -173,114 +184,45 @@ export default function Home() {
               </ul>
             </div>
 
+            {/* Work Experience Section */}
             <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-2">Projects</h2>
-
-              {/* HolaWear Shop Project */}
-              <div className="mb-4 border-b pb-4">
-                <button onClick={() => toggleProject("holawear")} className="w-full flex justify-between hover:bg-orange-200 py-2 rounded transition-colors cursor-pointer">
+              <h2 className="text-3xl font-bold mb-2">Work Experience</h2>
+              {/* ==================== work details ================== */}
+              <div className="mb-4">
+                <div className="flex justify-between items-start">
                   <div>
-                    <span className="font-bold underline">HolaWear Shop</span>
+                    <p className="font-bold">Junior Back-End Developer</p>
+                    <p>TechVision Software Solutions</p>
                   </div>
-                  <div className="flex items-center">
-                    <div className="text-right mr-2 text-[13px]">
-                      <p className="font-bold">Semester: 7/9</p>
-                      <p>05/2024 - 07/2024</p>
-                    </div>
-                    {expandedProjects.holawear ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </div>
-                </button>
-
-                {/* Smooth collapsible content */}
-                <div
-                  className="overflow-hidden transition-all duration-300 ease-in-out"
-                  style={{
-                    maxHeight: expandedProjects.holawear ? `${heights.holawear}px` : "0",
-                    opacity: expandedProjects.holawear ? 1 : 0,
-                  }}
-                >
-                  <div ref={projectRefs.holawear} className="mt-3 pl-4 py-2">
-                    <ul className="list-none text-[15px] space-y-2">
-                      <li>
-                        🔗{" "}
-                        <a href="https://github.com/dnthchung/HolaWear" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-                          https://github.com/dnthchung/HolaWear
-                        </a>
-                      </li>
-                      <li>
-                        <strong>A webapp</strong> that allows users to buy clothes with high professionalism.
-                      </li>
-                      <li>
-                        <strong>Tech stacks:</strong>
-                        <ul className="list-disc pl-6">
-                          <li>ReactJS, Tailwind CSS, Shadcn UI</li>
-                          <li>NodeJS, ExpressJS, Mongoose, JWT, Bcrypt</li>
-                          <li>MongoDB Atlas, Cloudinary</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Roles:</strong> Team lead, Full Stack Developer.
-                      </li>
-                      <li>
-                        <strong>Team size:</strong> 5
-                      </li>
-                    </ul>
-                  </div>
+                  <p className="text-sm">06/2023 - 12/2023</p>
                 </div>
+                <ul className="list-disc pl-6 mt-2 text-sm">
+                  <li>Developed RESTful APIs using Node.js, Express, and MongoDB</li>
+                  <li>Implemented authentication and authorization using JWT</li>
+                  <li>Collaborated with front-end developers to integrate APIs</li>
+                  <li>Participated in code reviews and improved code quality</li>
+                </ul>
               </div>
 
-              {/* Insurance Manage System Project */}
               <div className="mb-4">
-                <button onClick={() => toggleProject("insurance")} className="w-full flex justify-between hover:bg-orange-200 py-2 rounded transition-colors cursor-pointer">
-                  <div className="">
-                    <span className="font-bold underline">Insurance Manage System</span>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-bold">Software Developer Intern</p>
+                    <p>InnoTech Solutions</p>
                   </div>
-                  <div className="flex items-center">
-                    <div className="text-right mr-2 text-[13px]">
-                      <p className="font-bold">Semester: 5/9</p>
-                      <p>09/2023 - 12/2023</p>
-                    </div>
-                    {expandedProjects.insurance ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </div>
-                </button>
-
-                <div
-                  className="overflow-hidden transition-all duration-300 ease-in-out"
-                  style={{
-                    maxHeight: expandedProjects.insurance ? `${heights.insurance}px` : "0",
-                    opacity: expandedProjects.insurance ? 1 : 0,
-                  }}
-                >
-                  <div ref={projectRefs.insurance} className="mt-3 pl-4 py-2">
-                    <ul className="list-none text-[15px] space-y-2">
-                      <li>
-                        🔗{" "}
-                        <a href="https://github.com/DoanThanhChung-HE176077/Group5-InsuranceManageSystem" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">
-                          GitHub Repository
-                        </a>
-                      </li>
-                      <li>
-                        <strong>A webapp</strong> allows users to register and manage insurance contracts.
-                      </li>
-                      <li>
-                        <strong>Tech stacks:</strong>
-                        <ul className="list-disc pl-6">
-                          <li>Java JDBC, Java Servlet, SQL Server</li>
-                          <li>MVC model, Tomcat 10</li>
-                          <li>Bootstrap (v5.0), JSP, JQuery</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Roles:</strong> Team lead, Full Stack Developer.
-                      </li>
-                      <li>
-                        <strong>Team size:</strong> 5
-                      </li>
-                    </ul>
-                  </div>
+                  <p className="text-sm">01/2023 - 05/2023</p>
                 </div>
+                <ul className="list-disc pl-6 mt-2 text-sm">
+                  <li>Assisted in developing and maintaining web applications</li>
+                  <li>Worked with Java Spring Boot for back-end services</li>
+                  <li>Learned version control with Git and GitHub</li>
+                  <li>Participated in daily stand-up meetings and sprint planning</li>
+                </ul>
               </div>
             </div>
+
+            {/* Using the ProjectCarousel component */}
+            <ProjectCarousel projects={projectData} />
 
             <div className="mb-6">
               <h2 className="text-3xl font-bold mb-2">Certificates</h2>
