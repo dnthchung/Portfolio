@@ -1,23 +1,24 @@
-import type React from "react";
+// layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Import Roboto (you can also customize weight/subsets)
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Doan Thanh Chung - Portfolio",
   description: "Back-End Developer Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
