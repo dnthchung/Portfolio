@@ -3,16 +3,30 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import WorkExperience from "@/components/WorkExperience";
+import Certificates from "@/components/Certificates";
 
 // Project data
 const projectData = [
+  {
+    id: "bbus",
+    title: "BBus (Capstone Project)",
+    semester: "Semester: 9/9",
+    date: "12/2024 - 04/2025",
+    repoLink: "https://github.com/dnthchung/bbus-fe",
+    description:
+      "Smart Attendance on School Bus System. AI-based system for automatic student check-in/out via smart bus cameras. Built web admin panel and mobile app for parents, teachers, and drivers.",
+    techStacks: ["ReactJS, TailwindCSS, Flutter", "Spring Boot", "PostgreSQL"],
+    role: "Front-end Developer.",
+    teamSize: 5,
+  },
   {
     id: "holawear",
     title: "HolaWear Shop",
     semester: "Semester: 7/9",
     date: "05/2024 - 07/2024",
     repoLink: "https://github.com/dnthchung/HolaWear",
-    description: "that allows users to buy clothes with high professionalism.",
+    description: "A webapp that allows users to buy clothes with high professionalism.",
     techStacks: ["ReactJS, Tailwind CSS, Shadcn UI", "NodeJS, ExpressJS, Mongoose, JWT, Bcrypt", "MongoDB Atlas, Cloudinary"],
     role: "Team lead, Full Stack Developer.",
     teamSize: 5,
@@ -23,7 +37,7 @@ const projectData = [
     semester: "Semester: 5/9",
     date: "09/2023 - 12/2023",
     repoLink: "https://github.com/DoanThanhChung-HE176077/Group5-InsuranceManageSystem",
-    description: "allows users to register and manage insurance contracts.",
+    description: "A webapp allows users to register and manage insurance contracts.",
     techStacks: ["Java JDBC, Java Servlet, SQL Server", "MVC model, Tomcat 10", "Bootstrap (v5.0), JSP, JQuery"],
     role: "Team lead, Full Stack Developer.",
     teamSize: 5,
@@ -31,32 +45,29 @@ const projectData = [
 ];
 
 // Work Experience data
-// const workExperienceData = [
-//   {
-//     id: "techvision",
-//     title: "Junior Back-End Developer",
-//     company: "TechVision Software Solutions",
-//     date: "06/2023 - 12/2023",
-//     responsibilities: [
-//       "Developed RESTful APIs using Node.js, Express, and MongoDB",
-//       "Implemented authentication and authorization using JWT",
-//       "Collaborated with front-end developers to integrate APIs",
-//       "Participated in code reviews and improved code quality",
-//     ],
-//   },
-//   {
-//     id: "innotech",
-//     title: "Software Developer Intern",
-//     company: "InnoTech Solutions",
-//     date: "01/2023 - 05/2023",
-//     responsibilities: [
-//       "Assisted in developing and maintaining web applications",
-//       "Worked with Java Spring Boot for back-end services",
-//       "Learned version control with Git and GitHub",
-//       "Participated in daily stand-up meetings and sprint planning",
-//     ],
-//   },
-// ];
+const workExperienceData = [
+  {
+    id: "fpt-software",
+    title: "Back-End Developer (Internship)",
+    company: "FPT Software",
+    date: "01/2024 - 04/2024",
+    responsibilities: ["Developed RESTful APIs using Spring Boot, PostgreSQL.", "Implemented authentication and authorization using JWT.", "Collaborated with front-end (ReactJS) to integrate APIs."],
+  },
+];
+
+// Certificate data
+const certificatesData = [
+  {
+    id: "certificate-1",
+    title: "(Coursera): Web Design for Everybody.",
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76",
+  },
+  {
+    id: "certificate-2",
+    title: "(Coursera): Web Software Development Lifecycle.",
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76",
+  },
+];
 
 export default function Home() {
   return (
@@ -180,7 +191,8 @@ export default function Home() {
             <div className="mb-6">
               <h2 className="text-3xl font-bold mb-2">Education</h2>
               <p className="font-bold">FPT University (Hanoi Campus).</p>
-              <p>Software Engineering | September 2021 - Present</p>
+              <p>Software Engineering</p>
+              <p>09/2021 - 04/2025</p>
               <ul className="list-disc pl-6 mt-2">
                 <li>100% Scholarship</li>
                 <li>Final - year student</li>
@@ -190,67 +202,14 @@ export default function Home() {
 
             {/* Work Experience Section */}
             <div className="mb-6">
-              {/* <h2 className="text-3xl font-bold mb-2">Work Experience</h2>
-              <div className="mb-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-bold">FPT Software</p>
-                    <p>Back-End Developer (Internship) </p>
-                  </div>
-                  <p className="text-[13px]">01/2024 - 04/2024</p>
-                </div>
-                <ul className="list-disc pl-6 mt-2 text-sm">
-                  <li>Developed RESTful APIs using Spring Boot, postgresql</li>
-                  <li>Implemented authentication and authorization using JWT</li>
-                  <li>Collaborated with front-end(ReactJS) to integrate APIs</li>
-                  <li>Participated in code reviews and improved code quality</li>
-                </ul>
-              </div> */}
-
-              {/* <div className="mb-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-bold">Software Developer Intern</p>
-                    <p>InnoTech Solutions</p>
-                  </div>
-                  <p className="text-sm">01/2023 - 05/2023</p>
-                </div>
-                <ul className="list-disc pl-6 mt-2 text-sm">
-                  <li>Assisted in developing and maintaining web applications</li>
-                  <li>Worked with Java Spring Boot for back-end services</li>
-                  <li>Learned version control with Git and GitHub</li>
-                  <li>Participated in daily stand-up meetings and sprint planning</li>
-                </ul>
-              </div> */}
+              <WorkExperience experiences={workExperienceData} />
             </div>
 
             {/* Using the ProjectCarousel component */}
             <ProjectCarousel projects={projectData} />
 
             <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-2">Certificates</h2>
-              <ul className="space-y-4">
-                <li>
-                  <p className="font-bold">(Coursera): Web Design for Everybody.</p>
-                  <ul className="list-disc pl-6">
-                    <li className="break-all">
-                      <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76" className="text-blue-800 hover:underline">
-                        https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p className="font-bold">(Coursera): Web Software Development Lifecycle.</p>
-                  <ul className="list-disc pl-6">
-                    <li className="break-all">
-                      <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76" className="text-blue-800 hover:underline">
-                        https://www.coursera.org/account/accomplishments/specialization/certificate/GJBTBSKXJ76
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <Certificates certificates={certificatesData} />
             </div>
           </div>
         </div>

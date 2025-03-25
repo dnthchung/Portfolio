@@ -89,9 +89,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
                     {project.repoLink}
                   </a>
                 </li>
-                <li>
-                  <strong>A webapp</strong> {project.description}
-                </li>
+                <li>{project.description}</li>
                 <li>
                   <strong>Tech stacks:</strong>
                   <ul className="list-disc pl-6">
