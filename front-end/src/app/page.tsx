@@ -31,32 +31,32 @@ const projectData = [
 ];
 
 // Work Experience data
-const workExperienceData = [
-  {
-    id: "techvision",
-    title: "Junior Back-End Developer",
-    company: "TechVision Software Solutions",
-    date: "06/2023 - 12/2023",
-    responsibilities: [
-      "Developed RESTful APIs using Node.js, Express, and MongoDB",
-      "Implemented authentication and authorization using JWT",
-      "Collaborated with front-end developers to integrate APIs",
-      "Participated in code reviews and improved code quality",
-    ],
-  },
-  {
-    id: "innotech",
-    title: "Software Developer Intern",
-    company: "InnoTech Solutions",
-    date: "01/2023 - 05/2023",
-    responsibilities: [
-      "Assisted in developing and maintaining web applications",
-      "Worked with Java Spring Boot for back-end services",
-      "Learned version control with Git and GitHub",
-      "Participated in daily stand-up meetings and sprint planning",
-    ],
-  },
-];
+// const workExperienceData = [
+//   {
+//     id: "techvision",
+//     title: "Junior Back-End Developer",
+//     company: "TechVision Software Solutions",
+//     date: "06/2023 - 12/2023",
+//     responsibilities: [
+//       "Developed RESTful APIs using Node.js, Express, and MongoDB",
+//       "Implemented authentication and authorization using JWT",
+//       "Collaborated with front-end developers to integrate APIs",
+//       "Participated in code reviews and improved code quality",
+//     ],
+//   },
+//   {
+//     id: "innotech",
+//     title: "Software Developer Intern",
+//     company: "InnoTech Solutions",
+//     date: "01/2023 - 05/2023",
+//     responsibilities: [
+//       "Assisted in developing and maintaining web applications",
+//       "Worked with Java Spring Boot for back-end services",
+//       "Learned version control with Git and GitHub",
+//       "Participated in daily stand-up meetings and sprint planning",
+//     ],
+//   },
+// ];
 
 export default function Home() {
   return (
@@ -87,7 +87,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold mt-4">Objective</h2>
                 <ul className="list-disc pl-6 mt-2 space-y-2">
                   <li>
-                    <span className="font-bold">Short Term:</span> Looking for a Back-End (Node.js) intern position.
+                    <span className="font-bold">Short Term:</span> Looking for a Front-End intern position.
                   </li>
                   <li>
                     <span className="font-bold">Long Term:</span> Become an Engineering Manager in the next 5, 6 years.
@@ -132,36 +132,40 @@ export default function Home() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-bold">Programming Languages/Knowledge:</h3>
-                    <ul className="list-disc pl-6 space-y-1">
-                      <li>JavaScript, TypeScript: 5 semesters.</li>
+                    <ul className="list-disc pl-6 space-y-1 text-[15px]">
+                      <li>JavaScript, TypeScript: 6 semesters.</li>
                       <li>Java SE, Java EE: 7 semesters.</li>
                       <li>Kotlin: 2 semesters.</li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-bold">Frameworks/Libraries:</h3>
-                    <ul className="list-disc pl-6 space-y-1">
-                      <li>Back-End: NestJS, ExpressJS, SpringBoot.</li>
-                      <li>Front-End: ReactJS, NextJS.</li>
+                    <ul className="list-disc pl-6 space-y-1 text-[15px]">
+                      <li>
+                        <b>Back-End</b>: NestJS, ExpressJS, SpringBoot.
+                      </li>
+                      <li>
+                        <b>Front-End</b>: ReactJS, NextJS.
+                      </li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-bold">Database:</h3>
-                    <ul className="list-disc pl-6 space-y-1">
-                      <li>MongoDB, SQL Server, MySQL, PostgreSQL</li>
+                    <ul className="list-disc pl-6 space-y-1 text-[15px]">
+                      <li>MongoDB, SQL Server, PostgreSQL</li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-bold">Other Technical Skills:</h3>
-                    <ul className="list-disc pl-6 space-y-1">
+                    <ul className="list-disc pl-6 space-y-1 text-[15px]">
                       <li>Git</li>
                       <li>Figma, Adobe XD</li>
-                      <li>Agile, Scrum</li>
+                      {/* <li>Agile, Scrum</li> */}
                     </ul>
                   </div>
                   <div>
                     <h3 className="font-bold">Soft Skills:</h3>
-                    <p className="pl-2">Hardworking, strong in teamwork and time management, proficient in researching English documents.</p>
+                    <p className="pl-2 text-[15px]">Hardworking, strong in teamwork and time management, proficient in researching English documents.</p>
                   </div>
                 </div>
               </div>
@@ -171,7 +175,7 @@ export default function Home() {
           {/* Right Column */}
           <div className="p-4">
             <h1 className="text-3xl font-bold mb-2">DOAN THANH CHUNG</h1>
-            <p className="mb-6">Back-End Developer (Internship)</p>
+            <p className="mb-6">Front-End Developer (Internship)</p>
 
             <div className="mb-6">
               <h2 className="text-3xl font-bold mb-2">Education</h2>
@@ -186,25 +190,24 @@ export default function Home() {
 
             {/* Work Experience Section */}
             <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-2">Work Experience</h2>
-              {/* ==================== work details ================== */}
+              {/* <h2 className="text-3xl font-bold mb-2">Work Experience</h2>
               <div className="mb-4">
                 <div className="flex justify-between items-start">
                   <div>
-                    <p className="font-bold">Junior Back-End Developer</p>
-                    <p>TechVision Software Solutions</p>
+                    <p className="font-bold">FPT Software</p>
+                    <p>Back-End Developer (Internship) </p>
                   </div>
-                  <p className="text-sm">06/2023 - 12/2023</p>
+                  <p className="text-[13px]">01/2024 - 04/2024</p>
                 </div>
                 <ul className="list-disc pl-6 mt-2 text-sm">
-                  <li>Developed RESTful APIs using Node.js, Express, and MongoDB</li>
+                  <li>Developed RESTful APIs using Spring Boot, postgresql</li>
                   <li>Implemented authentication and authorization using JWT</li>
-                  <li>Collaborated with front-end developers to integrate APIs</li>
+                  <li>Collaborated with front-end(ReactJS) to integrate APIs</li>
                   <li>Participated in code reviews and improved code quality</li>
                 </ul>
-              </div>
+              </div> */}
 
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <div className="flex justify-between items-start">
                   <div>
                     <p className="font-bold">Software Developer Intern</p>
@@ -218,7 +221,7 @@ export default function Home() {
                   <li>Learned version control with Git and GitHub</li>
                   <li>Participated in daily stand-up meetings and sprint planning</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
 
             {/* Using the ProjectCarousel component */}
