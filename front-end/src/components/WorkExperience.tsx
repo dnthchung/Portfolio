@@ -22,7 +22,7 @@ export default function WorkExperience({ experiences }: WorkExperienceProps) {
           <div className="flex justify-between items-start">
             <div>
               <p className="font-bold">{experience.company}</p>
-              <p>{experience.title}</p>
+              <p className="text-[15px]">{experience.title}</p>
             </div>
             <p className="text-[13px]">{experience.date}</p>
           </div>
