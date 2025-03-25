@@ -72,7 +72,7 @@ const certificatesData = [
 ];
 
 export default function Home() {
-  const [showCV, setShowCV] = useState(true);
+  const [showCV, setShowCV] = useState(false);
 
   return (
     <main className="min-h-screen flex items-center justify-center p-10 relative">
@@ -83,7 +83,7 @@ export default function Home() {
           <Tooltip>
             <TooltipTrigger asChild>
               <a href="/documents/DoanThanhChung-CV.pdf" download target="_blank" rel="noopener noreferrer">
-                <button className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
+                <button className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border  rounded-sm shadow flex items-center">
                   <Download className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />
                 </button>
               </a>
@@ -96,7 +96,7 @@ export default function Home() {
           {/* Tooltip: Show/Hide CV */}
           <Tooltip>
             <TooltipTrigger asChild>
-              <button onClick={() => setShowCV(!showCV)} className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
+              <button onClick={() => setShowCV(!showCV)} className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border  rounded-sm shadow flex items-center">
                 {showCV ? <Eye className="h-5 w-5 opacity-75 hover:opacity-100 text-black" /> : <EyeOff className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />}
               </button>
             </TooltipTrigger>
