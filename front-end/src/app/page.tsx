@@ -5,8 +5,8 @@ import { useState } from "react";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import WorkExperience from "@/components/WorkExperience";
 import Certificates from "@/components/Certificates";
-import { Download, Eye } from "lucide-react";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Download, Eye, EyeOff } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 // Data
 const projectData = [
@@ -77,19 +77,35 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center p-10 relative">
       {/* 🔳 Fixed Toggle Buttons Top-Left */}
-      <div className="fixed top-4 left-4 z-50 flex items-center gap-2">
-        {/* Button: Download CV */}
-        <a href="/documents/DoanThanhChung-CV.pdf" download target="_blank" rel="noopener noreferrer">
-          <button className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
-            <Download className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />
-          </button>
-        </a>
+      <TooltipProvider>
+        <div className="fixed top-4 left-4 z-50 flex items-center gap-2">
+          {/* Tooltip: Download CV */}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a href="/documents/DoanThanhChung-CV.pdf" download target="_blank" rel="noopener noreferrer">
+                <button className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
+                  <Download className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />
+                </button>
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Download CV (PDF)</p>
+            </TooltipContent>
+          </Tooltip>
 
-        {/* Button: Toggle show/hide CV */}
-        <button onClick={() => setShowCV(!showCV)} className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
-          <Eye className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />
-        </button>
-      </div>
+          {/* Tooltip: Show/Hide CV */}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button onClick={() => setShowCV(!showCV)} className="bg-white hover:bg-gray-50 text-gray-800 py-1 px-2 border border-gray-200 rounded shadow flex items-center">
+                {showCV ? <Eye className="h-5 w-5 opacity-75 hover:opacity-100 text-black" /> : <EyeOff className="h-5 w-5 opacity-75 hover:opacity-100 text-black" />}
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{showCV ? "Hide CV" : "Show CV"}</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+      </TooltipProvider>
 
       {/* 🌫️ Video Background */}
       <div className="fixed inset-0 w-full h-full z-0">
