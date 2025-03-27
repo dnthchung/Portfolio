@@ -29,7 +29,7 @@ const projectData = [
     date: "05/2024 - 07/2024",
     repoLink: "https://github.com/dnthchung/HolaWear",
     description: "A webapp that allows users to buy clothes with high professionalism.",
-    techStacks: ["ReactJS, Tailwind CSS, Shadcn UI", "NodeJS, ExpressJS, Mongoose, JWT, Bcrypt", "MongoDB Atlas, Cloudinary"],
+    techStacks: ["ReactJS, Tailwind CSS, Shadcn UI, Redux, Redux Toolkit", "NodeJS, ExpressJS, Mongoose, JWT", "MongoDB Atlas, Cloudinary"],
     role: "Team lead, Full Stack Developer.",
     teamSize: 5,
   },
