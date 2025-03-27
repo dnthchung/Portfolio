@@ -192,10 +192,10 @@ export default function Home() {
                       <h3 className="font-bold">Frameworks/Libraries:</h3>
                       <ul className="list-disc pl-6 space-y-1">
                         <li>
-                          <b>Back-End</b>: NestJS, ExpressJS, SpringBoot
+                          <b>Front-End</b>: ReactJS (redux toolkit, contextAPI, tanstack router, tanstack query(react query)), NextJS
                         </li>
                         <li>
-                          <b>Front-End</b>: ReactJS, NextJS
+                          <b>Back-End</b>: NestJS, ExpressJS, SpringBoot
                         </li>
                       </ul>
                     </div>
