@@ -18,7 +18,7 @@ const projectData = [
     repoLink: "https://github.com/dnthchung/bbus-fe",
     description:
       "Smart Attendance on School Bus System. AI-based system for automatic student check-in/out via smart bus cameras. Built web admin panel and mobile app for parents, teachers, and drivers.",
-    techStacks: ["ReactJS, TailwindCSS, Flutter", "Spring Boot", "PostgreSQL"],
+    techStacks: ["ReactJS, TailwindCSS, Tanstack router, Tanstack query(react query)", " Flutter", "Spring Boot", "PostgreSQL"],
     role: "Front-end Developer.",
     teamSize: 5,
   },
@@ -183,19 +183,27 @@ export default function Home() {
                     <div>
                       <h3 className="font-bold">Programming Languages/Knowledge:</h3>
                       <ul className="list-disc pl-6 space-y-1">
-                        <li>JavaScript, TypeScript: 6 semesters.</li>
-                        <li>Java SE, Java EE: 7 semesters.</li>
-                        <li>Kotlin: 2 semesters.</li>
+                        <li> Java, JavaScript, TypeScript: 8 semesters.</li>
+                        {/* <li>Java SE, Java EE: 8 semesters.</li> */}
+                        <li>Dart, Kotlin: 2 semesters.</li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="font-bold">Frameworks/Libraries:</h3>
                       <ul className="list-disc pl-6 space-y-1">
                         <li>
-                          <b>Front-End</b>: ReactJS (redux toolkit, contextAPI, tanstack router, tanstack query(react query)), NextJS
+                          <b>Front-End</b>:
+                          <ul>
+                            <li>
+                              + <b>ReactJS</b>: redux, redux saga, redux toolkit, contextAPI, tanstack router, react query.
+                            </li>
+                            <li>
+                              + <b>NextJS</b>
+                            </li>
+                          </ul>
                         </li>
                         <li>
-                          <b>Back-End</b>: NestJS, ExpressJS, SpringBoot
+                          <b>Back-End</b>: NestJS, ExpressJS, (SpringBoot).
                         </li>
                       </ul>
                     </div>
