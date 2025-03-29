@@ -18,7 +18,7 @@ const projectData = [
     repoLink: "https://github.com/dnthchung/bbus-fe",
     description:
       "Smart Attendance on School Bus System. AI-based system for automatic student check-in/out via smart bus cameras. Built web admin panel and mobile app for parents, teachers, and drivers.",
-    techStacks: ["ReactJS, TailwindCSS, Tanstack router, Tanstack query(react query)", " Flutter", "Spring Boot", "PostgreSQL"],
+    techStacks: ["Flutter, ReactJS, tailwindcss, shadcn ui, tanstack router, tanstack query, recharts, leaflet.js", "Spring Boot, PostgreSQL"],
     role: "Front-end Developer.",
     teamSize: 5,
   },
@@ -222,7 +222,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-bold">Soft Skills:</h3>
-                      <p className="pl-2">Hardworking, strong in teamwork and time management, proficient in researching English documents.</p>
+                      <p className="pl-2">
+                        Hardworking, with strong teamwork and time management skills, proficient in researching documents and working in an English-speaking environment, with the ability to quickly
+                        learn and adapt to new technologies and requirements.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -245,6 +248,7 @@ export default function Home() {
                   </div>
                   <ul className="list-disc pl-6 mt-2">
                     <li>100% Scholarship</li>
+                    <li>TOEIC 700</li>
                     <li>Final - year student</li>
                     <li>Current Semester: 9/9</li>
                   </ul>
