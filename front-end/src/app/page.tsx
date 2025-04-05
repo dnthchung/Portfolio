@@ -14,7 +14,7 @@ const projectData = [
     id: "bbus",
     title: "BBus (Capstone Project)",
     semester: "Semester: 9/9",
-    date: "12/2024 - 04/2025",
+    date: "11/2024 - 05/2025",
     repoLink: "https://github.com/dnthchung/bbus-fe",
     description:
       "Smart Attendance on School Bus System. AI-based system for automatic student check-in/out via smart bus cameras. Built web admin panel and mobile app for parents, teachers, and drivers.",
