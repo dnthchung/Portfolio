@@ -244,7 +244,7 @@ export default function Home() {
                 <div className="text-[15px]">
                   <div className=" flex justify-between">
                     <p>Software Engineering</p>
-                    <p className="text-[13px]">09/2021 - 04/2025</p>
+                    <p className="text-[13px]">09/2021 - 05/2025</p>
                   </div>
                   <ul className="list-disc pl-6 mt-2">
                     <li>100% Scholarship</li>
