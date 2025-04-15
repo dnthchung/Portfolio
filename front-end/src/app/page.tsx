@@ -52,7 +52,7 @@ const workExperienceData = [
     id: "fpt-software",
     title: "Back-End Developer (Internship)",
     company: "FPT Software",
-    date: "01/2024 - 04/2024",
+    date: "01/2024 - 12/2024",
     responsibilities: ["Developed RESTful APIs using Spring Boot, PostgreSQL.", "Implemented authentication and authorization using JWT.", "Collaborated with front-end (ReactJS) to integrate APIs."],
   },
 ];
