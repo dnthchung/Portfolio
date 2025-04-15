@@ -135,7 +135,7 @@ export default function Home() {
                   <h2 className="text-3xl font-bold mt-4">Objective</h2>
                   <ul className="list-disc pl-6 mt-2 space-y-2">
                     <li>
-                      <span className="font-bold">Short Term:</span> Looking for a front-end internship position, aiming for long-term growth within the company.
+                      <span className="font-bold">Short Term:</span> Seeking a front-end position with the goal of establishing a long-lasting commitment to the company.
                     </li>
                     <li>
                       <span className="font-bold">Long Term:</span> Become an Engineering Manager in the next 5, 6 years.
@@ -235,7 +235,7 @@ export default function Home() {
             {/* Right Column */}
             <div className="p-4">
               <h1 className="text-3xl font-bold mb-2">DOAN THANH CHUNG</h1>
-              <p className="mb-6">Front-End Developer (Internship)</p>
+              <p className="mb-6">Front-End Developer</p>
 
               {/* Education */}
               <div className="mb-6">
@@ -248,9 +248,9 @@ export default function Home() {
                   </div>
                   <ul className="list-disc pl-6 mt-2">
                     <li>100% Scholarship</li>
-                    <li>TOEIC 700</li>
                     <li>Final - year student</li>
                     <li>Current Semester: 9/9</li>
+                    <li>TOEIC 750 (in progress)</li>
                   </ul>
                 </div>
               </div>
