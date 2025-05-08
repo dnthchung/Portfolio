@@ -138,7 +138,7 @@ export default function Home() {
                       <span className="font-bold">Short Term:</span> Seeking a front-end position with the goal of establishing a long-lasting commitment to the company.
                     </li>
                     <li>
-                      <span className="font-bold">Long Term:</span> Become an Engineering Manager in the next 5, 6 years.
+                      <span className="font-bold">Long Term:</span> To become a front-end leader within the next 3 to 4 years.
                     </li>
                   </ul>
                 </div>
